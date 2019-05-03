@@ -12,7 +12,7 @@ namespace Game
         /// <summary>
         /// главная точка входа для приложения.
         /// </summary>
-        [STAThread]
+        [STAThread]//comment
         static void Main()
         {
             Application.Run(new Game());
