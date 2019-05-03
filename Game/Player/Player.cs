@@ -22,5 +22,16 @@ namespace Game.PlayerClasses
         {
             Location = new Rectangle(new Point(x, y), Location.Size);
         }
+
+        private Ingredient ExprctedIngredient
+        {
+            get =>
+        }
+
+        public void Get(Storage storage)
+        {
+            if (storage.TryGet(out var p))
+                ;
+        }
     }
 }

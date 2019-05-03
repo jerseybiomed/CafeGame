@@ -7,3 +7,12 @@ D:\c#\Game\Game\obj\Debug\Game.csproj.GenerateResource.cache
 D:\c#\Game\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
 D:\c#\Game\Game\obj\Debug\Game.exe
 D:\c#\Game\Game\obj\Debug\Game.pdb
+W:\github\CafeGame\Game\bin\Debug\Game.exe.config
+W:\github\CafeGame\Game\bin\Debug\Game.exe
+W:\github\CafeGame\Game\bin\Debug\Game.pdb
+W:\github\CafeGame\Game\obj\Debug\Game.csprojAssemblyReference.cache
+W:\github\CafeGame\Game\obj\Debug\Game.Properties.Resources.resources
+W:\github\CafeGame\Game\obj\Debug\Game.csproj.GenerateResource.cache
+W:\github\CafeGame\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+W:\github\CafeGame\Game\obj\Debug\Game.exe
+W:\github\CafeGame\Game\obj\Debug\Game.pdb

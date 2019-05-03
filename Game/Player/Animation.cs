@@ -11,7 +11,7 @@ namespace Game.PlayerClasses
     {
         public static void Stand(Player player, Graphics graphics)
         {
-            var image = Image.FromFile(@"D:\c#\Game\Game\Images\Player.png");
+            var image = Image.FromFile(@"W:\github\CafeGame\Game\Images\Player.png");
             graphics.DrawImage(image, player.Location);
         }
     }

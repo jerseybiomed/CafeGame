@@ -9,15 +9,19 @@ namespace Game
 {
     public class Sandwich
     {
-        public string Name { get; set; }
+        public enum State
+        {
+            Nothing,
+
+        }
+
+        public string Name { get; set; } // whot does "name" mean???
 
         public Image Stripe { get; set; }
 
         public Rectangle Location { get; set; }
 
-        public Ingredient Bread { get; set; }
-        public Ingredient Meat { get; set; }
-        public Ingredient Vegetables { get; set; }
+        public State state;
 
         public Sandwich(string name)
         {
