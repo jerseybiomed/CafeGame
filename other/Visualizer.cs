@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Cafe.other
 {
-    static class Visualizer
+    static public class Visualizer
     {
         public static Point ConvertMathToWindow(Form form, Point mathPoint)
         {

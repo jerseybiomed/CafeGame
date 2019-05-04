@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cafe.Environment
 {
-    class Phone
+    public class Phone
     {
         private Storage Storage { get; }
 

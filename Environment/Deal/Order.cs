@@ -1,6 +1,6 @@
 ﻿namespace Cafe.Environment.Deal
 {
-    class Order
+    public class Order
     {
         Sandwich Sandwich { get; }
     }

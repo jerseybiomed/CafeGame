@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Cafe.Environment
 {
-    class Storage
+    public class Storage
     {
         public Ingredient Ingredient { get; private set; }
         public int Count { get; private set; }
