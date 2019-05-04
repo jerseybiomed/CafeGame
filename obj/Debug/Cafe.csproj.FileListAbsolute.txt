@@ -1,0 +1,9 @@
+W:\github\CafeGame\bin\Debug\Cafe.exe.config
+W:\github\CafeGame\bin\Debug\Cafe.exe
+W:\github\CafeGame\bin\Debug\Cafe.pdb
+W:\github\CafeGame\obj\Debug\Cafe.csprojAssemblyReference.cache
+W:\github\CafeGame\obj\Debug\Cafe.Properties.Resources.resources
+W:\github\CafeGame\obj\Debug\Cafe.csproj.GenerateResource.cache
+W:\github\CafeGame\obj\Debug\Cafe.csproj.CoreCompileInputs.cache
+W:\github\CafeGame\obj\Debug\Cafe.exe
+W:\github\CafeGame\obj\Debug\Cafe.pdb
