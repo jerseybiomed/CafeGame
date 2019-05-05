@@ -17,7 +17,7 @@ namespace Cafe.Tests
         private readonly RyeBread rye = new RyeBread();
         private readonly WhiteBread white = new WhiteBread();
         private readonly Beef beef = new Beef();
-        private readonly Hon hon = new Hon();
+        private readonly Hen hen = new Hen();
         private readonly Pork pork = new Pork();
         private readonly Tomato tomato = new Tomato();
         private readonly Cucumber cucumber = new Cucumber();
@@ -85,9 +85,9 @@ namespace Cafe.Tests
             var sandwich = new Sandwich();
             sandwich.Add(rye);
             sandwich.Add(pork);
-            sandwich.Add(hon);
+            sandwich.Add(hen);
             Assert.AreNotEqual(sandwich.Meat, null);
-            Assert.AreNotEqual(sandwich.Meat, hon);
+            Assert.AreNotEqual(sandwich.Meat, hen);
         }
 
         [Test]
@@ -95,7 +95,7 @@ namespace Cafe.Tests
         {
             var sandwich = new Sandwich();
             sandwich.Add(white);
-            sandwich.Add(hon);
+            sandwich.Add(hen);
             sandwich.Add(salad);
             sandwich.Add(cucumber);
             Assert.AreNotEqual(sandwich.Vegetables, null);

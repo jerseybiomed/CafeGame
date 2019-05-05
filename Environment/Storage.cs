@@ -25,9 +25,13 @@ namespace Cafe.Environment
         public Ingredient Ingredient { get; private set; }
         public int Count { get; private set; }
 
-        public Storage(out Phone phone)
+        public Phone Button { get; set; }
+
+        public Storage(Ingredient ingredient, int count)
         {
-            phone = new Phone(this);
+            Ingredient = ingredient;
+            Count = count;
+            Button = new Phone(this);
         }
 
         public Ingredient GetIngredient()

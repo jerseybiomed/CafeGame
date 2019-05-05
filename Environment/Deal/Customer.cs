@@ -15,6 +15,11 @@ namespace Cafe.Environment.Deal
             Order = Order.CreateRandomOrder();
         }
 
+        public Customer(Order order)
+        {
+            Order = order;
+        }
+
         public DealResult Complete(Tray tray)
         {
             return new DealResult(Order.Equals(tray));

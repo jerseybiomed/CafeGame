@@ -9,7 +9,7 @@ namespace Cafe.Environment.Deal
 {
     class Seller
     {
-        Tray Tray { get; } = new Tray();
+        public Tray Tray { get; } = new Tray();
 
         public Point Location { get; set; }
 
@@ -20,5 +20,10 @@ namespace Cafe.Environment.Deal
 
         public DealResult Complete(Customer customer) =>
             customer.Complete(Tray);
+
+        public void GetNewOrder()
+        {
+            Tray.GetNewSandwich();
+        }
     }
 }

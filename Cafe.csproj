@@ -75,6 +75,7 @@
     <Compile Include="Environment\Sandwich.cs" />
     <Compile Include="Environment\Ingredients\Vegetables.cs" />
     <Compile Include="Other\Visualizer.cs" />
+    <Compile Include="Tests\GameplayTest.cs" />
     <Compile Include="Tests\Sandwich_Should.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
