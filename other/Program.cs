@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Cafe.Environment;
+using Cafe.Environment.Ingredients;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,7 +16,15 @@ namespace Cafe.other
         [STAThread]
         static void Main()
         {
-            Application.Run(new Game());
+            var s = new Sandwich();
+            var b = new Bread();
+            var m = new Meat();
+            var v = new Vegetables();
+            s.Add(b);
+            s.Add(m);
+            s.Add(v);
+            Console.WriteLine(s.Vegetables is null);
+            //Application.Run(new Game());
         }
     }
 }

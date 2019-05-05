@@ -1,5 +1,6 @@
 ﻿using Cafe.Environment.Ingredients;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -10,31 +11,34 @@ namespace Cafe.Environment
         public Bread Bread { get; private set; }
         public Meat Meat { get; private set; }
         public Vegetables Vegetables { get; private set; }
-        IEnumerator<Type> Expected
-        {
-            get
-            {
-                yield return typeof(Bread);
-                yield return typeof(Meat);
-                yield return typeof(Vegetables);
-            }
-        }
-        Dictionary<Type, Ingredient> FindIngredient { get; }
+        private Type Expected;
+        private Dictionary<Type, Action<Ingredient>> AddIngredient { get; }
+        private Dictionary<Type, Type> NextExpected { get; }
 
         public Sandwich()
         {
-            Expected.MoveNext();
-            FindIngredient = new Ingredient[] { Bread, Meat, Vegetables }.ToDictionary(x => x.GetType());
+            Expected = typeof(Bread);
+            AddIngredient = new Dictionary<Type, Action<Ingredient>>
+            {
+                { typeof(Bread), x => Bread = x as Bread },
+                { typeof(Meat), x => Meat = x as Meat },
+                { typeof(Vegetables), x => Vegetables = x as Vegetables }
+            };
+            NextExpected = new Dictionary<Type, Type>
+            {
+                { typeof(Bread), typeof(Meat) },
+                { typeof(Meat), typeof(Vegetables) },
+                { typeof(Vegetables), null }
+            };
         }
 
         public void Add(Ingredient ingredient)
         {
-            if (Expected.Current != null)
-                if (ingredient.GetType() == Expected.Current)
-                {
-                    FindIngredient[ingredient.GetType()] = ingredient;
-                    Expected.MoveNext();
-                }
+            if (Expected?.IsInstanceOfType(ingredient) ?? false)
+            {
+                AddIngredient[ingredient.GetType()](ingredient);
+                Expected = NextExpected[Expected];
+            }
         }
     }
 }
