@@ -51,10 +51,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Environment\Deal\Order.cs" />
-    <Compile Include="Environment\Ingredients\Beef.cs" />
-    <Compile Include="Environment\Phone.cs" />
-    <Compile Include="Environment\Storage.cs" />
     <Compile Include="Environment\Ingredients\Bread.cs" />
+    <Compile Include="Environment\Storage.cs" />
     <Compile Include="Environment\Tray.cs" />
     <Compile Include="Environment\Deal\Customer.cs" />
     <Compile Include="other\Game.cs">

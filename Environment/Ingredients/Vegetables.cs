@@ -1,6 +1,4 @@
 ﻿namespace Cafe.Environment.Ingredients
 {
-    public class Vegetables : Ingredient
-    {
-    }
+    public class Vegetables : Ingredient { }
 }
