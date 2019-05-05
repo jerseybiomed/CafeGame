@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Cafe.Environment.Deal;
 
 namespace Cafe.Environment
 {
@@ -39,14 +40,6 @@ namespace Cafe.Environment
                 AddIngredient[Expected](ingredient);
                 Expected = NextExpected[Expected];
             }
-        }
-
-        public bool Equals(Sandwich sandwich)
-        {
-            return !(sandwich is null)
-                && Bread.GetType() == sandwich.Bread.GetType()
-                && Meat.GetType() == sandwich.Meat.GetType()
-                && Vegetables.GetType() == sandwich.Vegetables.GetType();
         }
     }
 }

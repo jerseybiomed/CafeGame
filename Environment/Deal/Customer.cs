@@ -8,6 +8,16 @@ namespace Cafe.Environment.Deal
 {
     public class Customer
     {
-        Order Order { get; }
+        public Order Order { get; }
+
+        public Customer()
+        {
+            Order = Order.CreateRandomOrder();
+        }
+
+        public DealResult Complete(Tray tray)
+        {
+            return new DealResult(Order.Equals(tray));
+        }
     }
 }

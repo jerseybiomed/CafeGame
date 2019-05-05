@@ -57,7 +57,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Environment\Deal\DealResult.cs" />
     <Compile Include="Environment\Deal\Order.cs" />
+    <Compile Include="Environment\Ingredients\Recipe.cs" />
     <Compile Include="Environment\Storage.cs" />
     <Compile Include="Environment\Ingredients\Bread.cs" />
     <Compile Include="Environment\Tray.cs" />
