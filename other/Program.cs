@@ -18,12 +18,11 @@ namespace Cafe.other
         {
             var s = new Sandwich();
             var b = new Bread();
-            var m = new Meat();
+            var m = new Beef();
             var v = new Vegetables();
             s.Add(b);
             s.Add(m);
             s.Add(v);
-            Console.WriteLine(s.Vegetables is null);
             //Application.Run(new Game());
         }
     }

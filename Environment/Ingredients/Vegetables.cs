@@ -2,7 +2,5 @@
 {
     public class Vegetables : Ingredient
     {
-        public static new int MaxCountOnStorage = 3;
-
     }
 }

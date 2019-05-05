@@ -36,7 +36,7 @@ namespace Cafe.Environment
         {
             if (Expected?.IsInstanceOfType(ingredient) ?? false)
             {
-                AddIngredient[ingredient.GetType()](ingredient);
+                AddIngredient[Expected](ingredient);
                 Expected = NextExpected[Expected];
             }
         }
