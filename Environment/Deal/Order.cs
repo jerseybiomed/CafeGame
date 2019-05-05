@@ -4,14 +4,14 @@ namespace Cafe.Environment.Deal
 {
     public class Order
     {
-        public Sandwich Sandwich { get; }
+        public Recipe Sandwich { get; }
 
         public Order(Bread bread, Meat meat, Vegetables vegetables)
         {
-            Sandwich = new Sandwich();
-            Sandwich.Add(bread);
-            Sandwich.Add(meat);
-            Sandwich.Add(vegetables);
+            Sandwich = new Recipe(
+                bread,
+                meat,
+                vegetables);
         }
 
         public static Order CreateRandomOrder()
@@ -24,7 +24,7 @@ namespace Cafe.Environment.Deal
 
         public bool Equals(Tray tray)
         {
-            return Sandwich.Equals(tray?.Sandwich);
+            return Sandwich.Equals(tray.Sandwich);
         }
     }
 }

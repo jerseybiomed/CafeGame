@@ -1,4 +1,5 @@
-﻿using Cafe.Environment.Ingredients;
+﻿using Cafe.Environment.Deal;
+using Cafe.Environment.Ingredients;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -39,16 +40,6 @@ namespace Cafe.Environment
                 AddIngredient[Expected](ingredient);
                 Expected = NextExpected[Expected];
             }
-        }
-
-        public new bool Equals(object obj)
-        {
-            if (obj == null || GetType() != obj.GetType())
-                return false;
-            var sanwich = obj as Sandwich;
-            return Bread.GetType() == sanwich.Bread.GetType()
-                && Meat.GetType() == sanwich.Meat.GetType()
-                && Vegetables.GetType() == sanwich.Vegetables.GetType();
         }
     }
 }
