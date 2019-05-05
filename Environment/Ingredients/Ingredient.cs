@@ -2,6 +2,7 @@
 {
     public class Ingredient
     {
-        public static int MaxCountOnStorage { get; }
+        private static int _maxCountOnStorage { get; }
+        public int MaxCountOnStorage => _maxCountOnStorage;
     }
 }

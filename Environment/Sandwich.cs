@@ -40,5 +40,13 @@ namespace Cafe.Environment
                 Expected = NextExpected[Expected];
             }
         }
+
+        public bool Equals(Sandwich sandwich)
+        {
+            return !(sandwich is null)
+                && Bread.GetType() == sandwich.Bread.GetType()
+                && Meat.GetType() == sandwich.Meat.GetType()
+                && Vegetables.GetType() == sandwich.Vegetables.GetType();
+        }
     }
 }

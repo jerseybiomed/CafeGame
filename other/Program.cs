@@ -18,7 +18,7 @@ namespace Cafe.other
         {
             var s = new Sandwich();
             var b = new Bread();
-            var m = new Beef();
+            var m = new Meat();
             var v = new Vegetables();
             s.Add(b);
             s.Add(m);
