@@ -12,9 +12,9 @@ namespace Cafe.Environment
         public Ingredient Ingredient { get; private set; }
         public int Count { get; private set; }
 
-        public Storage(out Phone phon)
+        public Storage(out Phone phone)
         {
-            phon = new Phone(this);
+            phone = new Phone(this);
         }
     }
 }
