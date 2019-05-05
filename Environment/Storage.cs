@@ -29,5 +29,15 @@ namespace Cafe.Environment
         {
             phone = new Phone(this);
         }
+
+        public Ingredient GetIngredient()
+        {
+            if (Count > 0)
+            {
+                --Count;
+                return Ingredient;
+            }
+            return null;
+        }
     }
 }

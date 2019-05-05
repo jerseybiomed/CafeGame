@@ -12,5 +12,13 @@ namespace Cafe.Environment.Deal
         Tray Tray { get; } = new Tray();
 
         public Point Location { get; set; }
+
+        public void TakeIngredient(Storage storage)
+        {
+            Tray.Add(storage.GetIngredient());
+        }
+
+        public DealResult Complete(Customer customer) =>
+            customer.Complete(Tray);
     }
 }
