@@ -25,8 +25,10 @@ namespace Cafe.Environment
         public Ingredient Ingredient { get; private set; }
         public int Count { get; private set; }
 
-        public Storage(out Phone phon)
+        public Storage(Ingredient ingredient, out Phone phon)
         {
+            Ingredient = ingredient;
+            Count = ingredient.MaxCountOnStorage;
             phon = new Phone(this);
         }
 
