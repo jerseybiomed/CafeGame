@@ -15,6 +15,7 @@ namespace Cafe.other
 {
     public class GameModel
     {
+        public readonly Customer customer = new Customer(new Order(rye, hen, salad));
         public readonly Seller seller = new Seller();
         public static readonly BrownBread brown = new BrownBread();
         public static readonly RyeBread rye = new RyeBread();
@@ -63,7 +64,6 @@ namespace Cafe.other
 
         public Game(GameModel game)
         {
-
             this.game = game;
             game.seller.GetNewOrder();
             var breadBox = new TextBox();
@@ -78,12 +78,14 @@ namespace Cafe.other
                 button.Location = new Point(row * 100, 0);
                 button.Size = new Size(100, 100);
                 button.Dock = DockStyle.None;
-                button.Text = game.storages[icolumn, irow].Ingredient.ToString();
+                button.Text = game.storages[icolumn, irow].Ingredient.ToString() + ' ' + game.storages[icolumn, irow].Count.ToString();
                 button.Click += (sender, args) =>
                 {
                     game.seller.TakeIngredient(game.storages[icolumn, irow]);
+                    var text = button.Text.Split(' ');
+                    button.Text = text[0] + ' ' + game.storages[icolumn, irow].Count.ToString();
                     if (game.storages[icolumn, irow].Ingredient == game.seller.Tray.Sandwich.Bread)
-                        breadBox.Text = button.Text;
+                        breadBox.Text = text[0];
                 };
                 Controls.Add(button);
             }
@@ -99,12 +101,14 @@ namespace Cafe.other
                 button.Location = new Point(row * 100, 100);
                 button.Size = new Size(100, 100);
                 button.Dock = DockStyle.None;
-                button.Text = game.storages[icolumn, irow].Ingredient.ToString();
+                button.Text = game.storages[icolumn, irow].Ingredient.ToString() + ' ' + game.storages[icolumn, irow].Count.ToString();
                 button.Click += (sender, args) =>
                 {
                     game.seller.TakeIngredient(game.storages[icolumn, irow]);
+                    var text = button.Text.Split(' ');
+                    button.Text = text[0] + ' ' + game.storages[icolumn, irow].Count.ToString();
                     if (game.storages[icolumn, irow].Ingredient == game.seller.Tray.Sandwich.Meat)
-                        meatBox.Text = button.Text;
+                        meatBox.Text = text[0];
                 };
                 Controls.Add(button);
             }
@@ -120,14 +124,46 @@ namespace Cafe.other
                 button.Location = new Point(row * 100, 200);
                 button.Size = new Size(100, 100);
                 button.Dock = DockStyle.None;
-                button.Text = game.storages[icolumn, irow].Ingredient.ToString();
+                button.Text = game.storages[icolumn, irow].Ingredient.ToString() + ' ' + game.storages[icolumn, irow].Count.ToString();
                 button.Click += (sender, args) =>
                 {
                     game.seller.TakeIngredient(game.storages[icolumn, irow]);
+                    var text = button.Text.Split(' ');
+                    button.Text = text[0] + ' ' + game.storages[icolumn, irow].Count.ToString();
                     if (game.storages[icolumn, irow].Ingredient == game.seller.Tray.Sandwich.Vegetables)
-                        vegetableBox.Text = button.Text;
+                        vegetableBox.Text = text[0];
                 };
                 Controls.Add(button);
+            }
+            var respectBox = new TextBox();
+            respectBox.Location = new Point(600, 0);
+            respectBox.Size = new Size(100, 100);
+            Controls.Add(respectBox);
+            var completeButton = new Button();
+            completeButton.Location = new Point(600, 400);
+            completeButton.Size = new Size(100, 25);
+            completeButton.Dock = DockStyle.None;
+            completeButton.Text = "Complete";
+            completeButton.Click += (sender, args) =>
+            {
+                var changeRespect = game.seller.Complete(game.customer).ChangeRespect;
+                if (changeRespect < 0)
+                    respectBox.Text = "-rep";
+                else
+                    respectBox.Text = "+rep";
+                game.seller.GetNewOrder();
+                breadBox.Text = "";
+                meatBox.Text = "";
+                vegetableBox.Text = "";
+            };
+            Controls.Add(completeButton);
+            for (var i = 0; i < 3; i++)
+            {
+                var customerBox = new TextBox();
+                customerBox.Location = new Point(400, 450 + i * 50);
+                customerBox.Size = new Size(100, 50);
+                customerBox.Text = game.customer.Order.Sandwich.Ingredients.ElementAt(i).ToString();
+                Controls.Add(customerBox);
             }
             game.Start();
         }

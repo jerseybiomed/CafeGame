@@ -13,9 +13,18 @@ namespace Cafe.Environment.Deal
 
         public Point Location { get; set; }
 
+        public IEnumerable<Type> Expecteds
+        {
+            get
+            {
+                yield return Tray.Sandwich.Expected;
+            }
+        }
+
         public void TakeIngredient(Storage storage)
         {
-            Tray.Add(storage.GetIngredient());
+            if (Expecteds.Any(x => x.IsInstanceOfType(storage.Ingredient)))
+                Tray.Add(storage.GetIngredient());
         }
 
         public DealResult Complete(Customer customer) =>

@@ -12,7 +12,7 @@ namespace Cafe.Environment
         public Bread Bread { get; private set; }
         public Meat Meat { get; private set; }
         public Vegetables Vegetables { get; private set; }
-        private Type Expected;
+        public Type Expected;
         private Dictionary<Type, Action<Ingredient>> AddIngredient { get; }
         private Dictionary<Type, Type> NextExpected { get; }
 
