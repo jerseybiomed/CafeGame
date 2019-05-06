@@ -26,6 +26,7 @@ namespace Cafe.other
         public static readonly Tomato tomato = new Tomato();
         public static readonly Cucumber cucumber = new Cucumber();
         public static readonly Salad salad = new Salad();
+
         public readonly Storage[,] storages = { {
             new Storage(rye, RyeBread.MaxCountOnStorage),
             new Storage(brown, BrownBread.MaxCountOnStorage),
@@ -42,20 +43,6 @@ namespace Cafe.other
         {
             Size = size;
         }
-
-        public void Start()
-        {
-            for (int row = 0; row < Size; row++)
-                for (int column = 0; column < Size; column++)
-                    SetState(row, column, (row + column) % 2 == 0);
-        }
-
-        void SetState(int row, int column, bool state)
-        {
-            if (StateChanged != null) StateChanged(row, column, storages[row, column]);
-        }
-
-        public event Action<int, int, Storage> StateChanged;
     }
 
     public partial class Game : Form
@@ -165,7 +152,6 @@ namespace Cafe.other
                 customerBox.Text = game.customer.Order.Sandwich.Ingredients.ElementAt(i).ToString();
                 Controls.Add(customerBox);
             }
-            game.Start();
         }
 
         //public Game()
