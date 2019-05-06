@@ -7,16 +7,136 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Cafe.Environment;
+using Cafe.Environment.Deal;
+using Cafe.Environment.Ingredients;
 
 namespace Cafe.other
 {
+    public class GameModel
+    {
+        public readonly Seller seller = new Seller();
+        public static readonly BrownBread brown = new BrownBread();
+        public static readonly RyeBread rye = new RyeBread();
+        public static readonly WhiteBread white = new WhiteBread();
+        public static readonly Beef beef = new Beef();
+        public static readonly Hen hen = new Hen();
+        public static readonly Pork pork = new Pork();
+        public static readonly Tomato tomato = new Tomato();
+        public static readonly Cucumber cucumber = new Cucumber();
+        public static readonly Salad salad = new Salad();
+        public readonly Storage[,] storages = { {
+            new Storage(rye, RyeBread.MaxCountOnStorage),
+            new Storage(brown, BrownBread.MaxCountOnStorage),
+            new Storage(white, WhiteBread.MaxCountOnStorage) }, {
+            new Storage(beef, Beef.MaxCountOnStorage),
+            new Storage(hen, Hen.MaxCountOnStorage),
+            new Storage(pork, Pork.MaxCountOnStorage)}, {
+            new Storage(tomato, Tomato.MaxCountOnStorage),
+            new Storage(cucumber, Cucumber.MaxCountOnStorage),
+            new Storage(salad, Salad.MaxCountOnStorage)} };
+        public readonly int Size;
+
+        public GameModel(int size)
+        {
+            Size = size;
+        }
+
+        public void Start()
+        {
+            for (int row = 0; row < Size; row++)
+                for (int column = 0; column < Size; column++)
+                    SetState(row, column, (row + column) % 2 == 0);
+        }
+
+        void SetState(int row, int column, bool state)
+        {
+            if (StateChanged != null) StateChanged(row, column, storages[row, column]);
+        }
+
+        public event Action<int, int, Storage> StateChanged;
+    }
+
     public partial class Game : Form
     {
-        public Game()
+        GameModel game;
+
+        public Game(GameModel game)
         {
-            ClientSize = new Size(800, 600);
-            MouseMove += (sender, args) =>
-                Text = $"Cafe: {args.X,3} {ClientSize.Height - args.Y,3}";
+
+            this.game = game;
+            game.seller.GetNewOrder();
+            var breadBox = new TextBox();
+            breadBox.Location = new Point(400, 0);
+            breadBox.Size = new Size(100, 100);
+            Controls.Add(breadBox);
+            for (int row = 0; row < 3; row++)
+            {
+                var icolumn = 0;
+                var irow = row;
+                var button = new Button();
+                button.Location = new Point(row * 100, 0);
+                button.Size = new Size(100, 100);
+                button.Dock = DockStyle.None;
+                button.Text = game.storages[icolumn, irow].Ingredient.ToString();
+                button.Click += (sender, args) =>
+                {
+                    game.seller.TakeIngredient(game.storages[icolumn, irow]);
+                    if (game.storages[icolumn, irow].Ingredient == game.seller.Tray.Sandwich.Bread)
+                        breadBox.Text = button.Text;
+                };
+                Controls.Add(button);
+            }
+            var meatBox = new TextBox();
+            meatBox.Location = new Point(400, 100);
+            meatBox.Size = new Size(100, 100);
+            Controls.Add(meatBox);
+            for (int row = 0; row < 3; row++)
+            {
+                var icolumn = 1;
+                var irow = row;
+                var button = new Button();
+                button.Location = new Point(row * 100, 100);
+                button.Size = new Size(100, 100);
+                button.Dock = DockStyle.None;
+                button.Text = game.storages[icolumn, irow].Ingredient.ToString();
+                button.Click += (sender, args) =>
+                {
+                    game.seller.TakeIngredient(game.storages[icolumn, irow]);
+                    if (game.storages[icolumn, irow].Ingredient == game.seller.Tray.Sandwich.Meat)
+                        meatBox.Text = button.Text;
+                };
+                Controls.Add(button);
+            }
+            var vegetableBox = new TextBox();
+            vegetableBox.Location = new Point(400, 200);
+            vegetableBox.Size = new Size(100, 100);
+            Controls.Add(vegetableBox);
+            for (int row = 0; row < 3; row++)
+            {
+                var icolumn = 2;
+                var irow = row;
+                var button = new Button();
+                button.Location = new Point(row * 100, 200);
+                button.Size = new Size(100, 100);
+                button.Dock = DockStyle.None;
+                button.Text = game.storages[icolumn, irow].Ingredient.ToString();
+                button.Click += (sender, args) =>
+                {
+                    game.seller.TakeIngredient(game.storages[icolumn, irow]);
+                    if (game.storages[icolumn, irow].Ingredient == game.seller.Tray.Sandwich.Vegetables)
+                        vegetableBox.Text = button.Text;
+                };
+                Controls.Add(button);
+            }
+            game.Start();
         }
+
+        //public Game()
+        //{
+        //    ClientSize = new Size(800, 600);
+        //    MouseMove += (sender, args) =>
+        //        Text = $"Cafe: {args.X,3} {ClientSize.Height - args.Y,3}";
+        //}
     }
 }

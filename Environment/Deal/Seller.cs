@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Cafe.Environment.Deal
 {
-    class Seller
+    public class Seller
     {
         public Tray Tray { get; } = new Tray();
 
