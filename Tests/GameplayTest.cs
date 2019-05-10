@@ -23,16 +23,10 @@ namespace Cafe.Tests
         private static readonly Tomato tomato = new Tomato();
         private static readonly Cucumber cucumber = new Cucumber();
         private static readonly Salad salad = new Salad();
-        private static readonly Storage[,] storages = { { 
-            new Storage(rye, RyeBread.MaxCountOnStorage),
-            new Storage(brown, BrownBread.MaxCountOnStorage),
-            new Storage(white, WhiteBread.MaxCountOnStorage) }, {
-            new Storage(beef, Beef.MaxCountOnStorage),
-            new Storage(hen, Hen.MaxCountOnStorage),
-            new Storage(pork, Pork.MaxCountOnStorage)}, {
-            new Storage(tomato, Tomato.MaxCountOnStorage),
-            new Storage(cucumber, Cucumber.MaxCountOnStorage),
-            new Storage(salad, Salad.MaxCountOnStorage)} };
+        private static readonly Storage[,] storages = { 
+            { new Storage(rye), new Storage(brown), new Storage(white) }, 
+            { new Storage(beef), new Storage(hen), new Storage(pork) }, 
+            { new Storage(tomato), new Storage(cucumber), new Storage(salad) } };
 
         [Test]
         public void SimpleTest()

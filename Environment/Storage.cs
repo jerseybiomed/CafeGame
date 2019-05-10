@@ -27,10 +27,10 @@ namespace Cafe.Environment
 
         public Phone Button { get; set; }
 
-        public Storage(Ingredient ingredient, int count)
+        public Storage(Ingredient ingredient)
         {
             Ingredient = ingredient;
-            Count = count;
+            Count = ingredient.MaxCountOnStorage;
             Button = new Phone(this);
         }
 
