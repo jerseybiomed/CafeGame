@@ -86,6 +86,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -101,7 +102,141 @@
   <ItemGroup>
     <None Include="Other\App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\greyBread.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ryeBread.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whiteBread.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beef.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pork.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cucumber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tomato.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\greyBreadBeef.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\greyBreadHen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\greyBreadPork.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ryeBreadBeef.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ryeBreadHen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ryeBreadPork.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whiteBreadBeef.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whiteBreadHen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whiteBreadPork.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\greyBreadBeefCucumber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\greyBreadBeefSalad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\greyBreadBeefTomato.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\greyBreadHenCucumber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\greyBreadHenSalad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\greyBreadHenTomato.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\greyBreadPorkCucumber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\greyBreadPorkSalad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\greyBreadPorkTomato.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ryeBreadBeefCucumber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ryeBreadBeefSalad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ryeBreadBeefTomato.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ryeBreadHenCucumber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ryeBreadHenSalad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ryeBreadHenTomato.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ryeBreadPorkCucumber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ryeBreadPorkSalad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ryeBreadPorkTomato.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whiteBreadBeefCucumber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whiteBreadBeefSalad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whiteBreadBeefTomato.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whiteBreadHenCucumber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whiteBreadHenSalad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whiteBreadHenTomato.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whiteBreadPorkCucumber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whiteBreadPorkSalad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whiteBreadPorkTomato.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

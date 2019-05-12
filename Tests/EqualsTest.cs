@@ -11,12 +11,19 @@ using Cafe.Environment.Ingredients;
 namespace Cafe.Tests
 {
     [TestFixture]
-    class EqualsTest
+    class IngredientTests
     {
         [Test]
         public void BreadEquals()
         {
             Assert.AreEqual(true, new WhiteBread().Equals(new WhiteBread()));
+        }
+
+        [Test]
+        public void UppcastIngredient()
+        {
+            var beef = new Beef();
+            Assert.AreEqual(3, beef.MaxCountOnStorage);
         }
     }
 }

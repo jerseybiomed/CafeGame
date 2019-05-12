@@ -46,7 +46,7 @@
     
     mimetype: application/x-microsoft.net.object.binary.base64
     value   : The object must be serialized with 
-            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
@@ -60,6 +60,7 @@
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
@@ -68,9 +69,10 @@
               <xsd:sequence>
                 <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="name" use="required" type="xsd:string" />
               <xsd:attribute name="type" type="xsd:string" />
               <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
@@ -85,9 +87,10 @@
                 <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
                 <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
               <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
               <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
@@ -109,9 +112,145 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="beef" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\beef.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cucumber" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cucumber.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="greyBread" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\greyBread.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="greyBreadBeef" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\greyBreadBeef.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="greyBreadBeefCucumber" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\greyBreadBeefCucumber.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="greyBreadBeefSalad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\greyBreadBeefSalad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="greyBreadBeefTomato" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\greyBreadBeefTomato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="greyBreadHen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\greyBreadHen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="greyBreadHenCucumber" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\greyBreadHenCucumber.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="greyBreadHenSalad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\greyBreadHenSalad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="greyBreadHenTomato" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\greyBreadHenTomato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="greyBreadPork" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\greyBreadPork.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="greyBreadPorkCucumber" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\greyBreadPorkCucumber.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="greyBreadPorkSalad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\greyBreadPorkSalad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="greyBreadPorkTomato" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\greyBreadPorkTomato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pork" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pork.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ryeBread" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ryeBread.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ryeBreadBeef" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ryeBreadBeef.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ryeBreadBeefCucumber" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ryeBreadBeefCucumber.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ryeBreadBeefSalad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ryeBreadBeefSalad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ryeBreadBeefTomato" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ryeBreadBeefTomato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ryeBreadHen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ryeBreadHen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ryeBreadHenCucumber" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ryeBreadHenCucumber.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ryeBreadHenSalad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ryeBreadHenSalad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ryeBreadHenTomato" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ryeBreadHenTomato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ryeBreadPork" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ryeBreadPork.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ryeBreadPorkCucumber" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ryeBreadPorkCucumber.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ryeBreadPorkSalad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ryeBreadPorkSalad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ryeBreadPorkTomato" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ryeBreadPorkTomato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="salad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\salad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tomato" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tomato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="whiteBread" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\whiteBread.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="whiteBreadBeef" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\whiteBreadBeef.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="whiteBreadBeefCucumber" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\whiteBreadBeefCucumber.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="whiteBreadBeefSalad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\whiteBreadBeefSalad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="whiteBreadBeefTomato" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\whiteBreadBeefTomato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="whiteBreadHen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\whiteBreadHen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="whiteBreadHenCucumber" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\whiteBreadHenCucumber.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="whiteBreadHenSalad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\whiteBreadHenSalad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="whiteBreadHenTomato" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\whiteBreadHenTomato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="whiteBreadPork" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\whiteBreadPork.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="whiteBreadPorkCucumber" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\whiteBreadPorkCucumber.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="whiteBreadPorkSalad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\whiteBreadPorkSalad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="whiteBreadPorkTomato" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\whiteBreadPorkTomato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
