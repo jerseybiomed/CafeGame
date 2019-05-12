@@ -4,7 +4,10 @@
 
     public class Tomato : Vegetables
     {
-        public static new int MaxCountOnStorage = 5;
+        public Tomato()
+        {
+            _maxCountOnStorage = 5;
+        }
 
         public override string ToString()
         {
@@ -13,7 +16,10 @@
     }
     public class Cucumber : Vegetables
     {
-        public static new int MaxCountOnStorage = 6;
+        public Cucumber()
+        {
+            _maxCountOnStorage = 6;
+        }
 
         public override string ToString()
         {
@@ -22,7 +28,10 @@
     }
     public class Salad : Vegetables
     {
-        public static new int MaxCountOnStorage = 4;
+        public Salad()
+        {
+            _maxCountOnStorage = 4;
+        }
 
         public override string ToString()
         {

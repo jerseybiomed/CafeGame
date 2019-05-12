@@ -23,7 +23,9 @@ namespace Cafe.Tests
         public void UppcastIngredient()
         {
             var beef = new Beef();
-            Assert.AreEqual(3, beef.MaxCountOnStorage);
+            var hen = new Hen();
+            Assert.AreEqual(5, hen.MaxCountOnStorage);
+            Assert.AreEqual(3, ((Ingredient)beef).MaxCountOnStorage);
         }
     }
 }

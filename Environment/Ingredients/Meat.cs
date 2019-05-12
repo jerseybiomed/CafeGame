@@ -4,7 +4,10 @@
 
     public class Beef : Meat
     {
-        protected static new int _maxCountOnStorage = 3;
+        public Beef()
+        {
+            _maxCountOnStorage = 3;
+        }
 
         public override string ToString()
         {
@@ -13,7 +16,10 @@
     }
     public class Hen : Meat
     {
-        public static new int MaxCountOnStorage = 5;
+        public Hen()
+        {
+            _maxCountOnStorage = 5;
+        }
 
         public override string ToString()
         {
@@ -22,7 +28,10 @@
     }
     public class Pork : Meat
     {
-        public static new int MaxCountOnStorage = 4;
+        public Pork()
+        {
+            _maxCountOnStorage = 4;
+        }
 
         public override string ToString()
         {

@@ -4,7 +4,10 @@
 
     public class BrownBread : Bread
     {
-        public static new int MaxCountOnStorage = 3;
+        public BrownBread()
+        {
+            _maxCountOnStorage = 3;
+        }
 
         public override string ToString()
         {
@@ -13,7 +16,10 @@
     }
     public class RyeBread : Bread
     {
-        public static new int MaxCountOnStorage = 3;
+        public RyeBread()
+        {
+            _maxCountOnStorage = 3;
+        }
 
         public override string ToString()
         {
@@ -22,7 +28,10 @@
     }
     public class WhiteBread : Bread
     {
-        public static new int MaxCountOnStorage = 3;
+        public WhiteBread()
+        {
+            _maxCountOnStorage = 3;
+        }
 
         public override string ToString()
         {

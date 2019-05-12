@@ -2,7 +2,7 @@
 {
     public class Ingredient
     {
-        protected static int _maxCountOnStorage { get; }
+        protected int _maxCountOnStorage { get; set; }
         public int MaxCountOnStorage => _maxCountOnStorage;
 
         public override string ToString()
