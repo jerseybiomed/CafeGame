@@ -2,9 +2,9 @@
 {
     public class Bread : Ingredient { }
 
-    public class BrownBread : Bread
+    public class GreyBread : Bread
     {
-        public BrownBread()
+        public GreyBread()
         {
             _maxCountOnStorage = 3;
         }

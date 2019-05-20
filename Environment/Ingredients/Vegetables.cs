@@ -1,8 +1,8 @@
 ﻿namespace Cafe.Environment.Ingredients
 {
-    public class Vegetables : Ingredient { }
+    public class Vegetable : Ingredient { }
 
-    public class Tomato : Vegetables
+    public class Tomato : Vegetable
     {
         public Tomato()
         {
@@ -14,7 +14,7 @@
             return $"Tomato";
         }
     }
-    public class Cucumber : Vegetables
+    public class Cucumber : Vegetable
     {
         public Cucumber()
         {
@@ -26,7 +26,7 @@
             return $"Cucumber";
         }
     }
-    public class Salad : Vegetables
+    public class Salad : Vegetable
     {
         public Salad()
         {

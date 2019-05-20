@@ -6,8 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
-
-namespace Cafe.other
+namespace Cafe.Other
 {
     static class Program
     {
@@ -17,15 +16,7 @@ namespace Cafe.other
         [STAThread]
         static void Main()
         {
-            //var s = new Sandwich();
-            //var b = new Bread();
-            //var m = new Meat();
-            //var v = new Vegetables();
-            //s.Add(b);
-            //s.Add(m);
-            //s.Add(v);
-            var game = new GameModel(3);
-            Application.Run(new Game(game) { ClientSize = new Size(800, 600) });
+            Application.Run(new GameForm(new GameModel(10)));
         }
     }
 }

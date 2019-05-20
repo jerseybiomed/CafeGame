@@ -13,7 +13,7 @@ namespace Cafe.Tests
     class Sandwich_Should
     {
         private readonly Sandwich sandwich = new Sandwich();
-        private readonly BrownBread brown = new BrownBread();
+        private readonly GreyBread brown = new GreyBread();
         private readonly RyeBread rye = new RyeBread();
         private readonly WhiteBread white = new WhiteBread();
         private readonly Beef beef = new Beef();

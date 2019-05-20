@@ -11,7 +11,7 @@ namespace Cafe.Environment
     {
         public Bread Bread { get; private set; }
         public Meat Meat { get; private set; }
-        public Vegetables Vegetables { get; private set; }
+        public Vegetable Vegetables { get; private set; }
         public Type Expected;
         private Dictionary<Type, Action<Ingredient>> AddIngredient { get; }
         private Dictionary<Type, Type> NextExpected { get; }
@@ -23,13 +23,13 @@ namespace Cafe.Environment
             {
                 { typeof(Bread), x => Bread = x as Bread },
                 { typeof(Meat), x => Meat = x as Meat },
-                { typeof(Vegetables), x => Vegetables = x as Vegetables }
+                { typeof(Vegetable), x => Vegetables = x as Vegetable }
             };
             NextExpected = new Dictionary<Type, Type>
             {
                 { typeof(Bread), typeof(Meat) },
-                { typeof(Meat), typeof(Vegetables) },
-                { typeof(Vegetables), null }
+                { typeof(Meat), typeof(Vegetable) },
+                { typeof(Vegetable), null }
             };
         }
 

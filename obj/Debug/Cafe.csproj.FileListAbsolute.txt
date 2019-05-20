@@ -15,3 +15,4 @@ D:\Documents\GitHub\CafeGame\obj\Debug\Cafe.csproj.CoreCompileInputs.cache
 D:\Documents\GitHub\CafeGame\obj\Debug\Cafe.csproj.CopyComplete
 D:\Documents\GitHub\CafeGame\obj\Debug\Cafe.exe
 D:\Documents\GitHub\CafeGame\obj\Debug\Cafe.pdb
+D:\Documents\GitHub\CafeGame\obj\Debug\Cafe.Other.GameForm.resources

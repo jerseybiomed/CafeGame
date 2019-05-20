@@ -14,7 +14,7 @@ namespace Cafe.Tests
     class GameplayTest
     {
         private static readonly Seller seller = new Seller();
-        private static readonly BrownBread brown = new BrownBread();
+        private static readonly GreyBread grey = new GreyBread();
         private static readonly RyeBread rye = new RyeBread();
         private static readonly WhiteBread white = new WhiteBread();
         private static readonly Beef beef = new Beef();
@@ -24,7 +24,7 @@ namespace Cafe.Tests
         private static readonly Cucumber cucumber = new Cucumber();
         private static readonly Salad salad = new Salad();
         private static readonly Storage[,] storages = { 
-            { new Storage(rye), new Storage(brown), new Storage(white) }, 
+            { new Storage(rye), new Storage(grey), new Storage(white) }, 
             { new Storage(beef), new Storage(hen), new Storage(pork) }, 
             { new Storage(tomato), new Storage(cucumber), new Storage(salad) } };
 

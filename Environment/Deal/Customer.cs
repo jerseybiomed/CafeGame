@@ -9,15 +9,29 @@ namespace Cafe.Environment.Deal
     public class Customer
     {
         public Order Order { get; }
+        public int Time { get; private set; }
+        private readonly int maxTime;
 
-        public Customer()
+        public Customer(int orderTime)
         {
+            maxTime = orderTime;
+            Time = 0;
             Order = Order.CreateRandomOrder();
         }
 
         public Customer(Order order)
         {
             Order = order;
+        }
+
+        public void UpdateOrderTime()
+        {
+            Time += 1;
+        }
+
+        public bool CheckOrderTime()
+        {
+            return Time <= maxTime;
         }
 
         public DealResult Complete(Tray tray)
